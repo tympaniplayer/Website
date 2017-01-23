@@ -12,16 +12,14 @@ namespace Website
     public class Program
     {
         public static void Main(string[] args)
-{
- 
-    var host = new WebHostBuilder()
-        .UseKestrel()
-        .UseUrls("http://localhost:5000")
-        .UseContentRoot(Environment.GetEnvironmentVariable("ASPNETCO‌​RE_ENVIRONMENT") == "Production" ? Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) : Directory.GetCurrentDirectory())
-        .UseStartup<Startup>()
-        .Build();
- 
-    host.Run();
-}
+        { 
+          var host = new WebHostBuilder()
+              .UseKestrel()
+              .UseUrls("http://localhost:5000")
+              .UseContentRoot(Environment.GetEnvironmentVariable("ASPNETCO‌​RE_ENVIRONMENT") == "Production" ? Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) : Directory.GetCurrentDirectory())
+              .UseStartup<Startup>()
+              .Build(); 
+          host.Run();
+      }
     }
 }
