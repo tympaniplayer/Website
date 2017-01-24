@@ -1,0 +1,27 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "We've made some big updates in this release, so it’s **important** that you spend a few minutes to learn what’s new.",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "run-sequence": "^1.2.2",
+    "semantic-ui": "^2.2.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tympaniplayer/Website.git"
+  },
+  "author": "Nate Palmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tympaniplayer/Website/issues"
+  },
+  "homepage": "https://github.com/tympaniplayer/Website#readme"
+}
