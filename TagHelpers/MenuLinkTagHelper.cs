@@ -31,21 +31,22 @@ namespace Website.TagHelpers
         {
             var urlHelper = new UrlHelper(ViewContext);
 
-            string menuUrl = urlHelper.Action(ActionName, ControllerName);
+            string menuUrl = urlHelper.Action(ActionName, ControllerName);            
 
-            output.TagName = "a";
-            output.Attributes.Add("href", $"{menuUrl}");
-            output.Attributes.Add("class", "item blue");
-            output.Content.SetContent(MenuText);
+            output.TagName = "li";
+            //output.Attributes.Add("href", $"{menuUrl}");
+            
+            output.Content.SetHtmlContent($"<a href=\"{menuUrl}\">{MenuText}</a>");
+            
 
             var routeData = ViewContext.RouteData.Values;
             var currentController = routeData["controller"];
             var currentAction = routeData["action"];
-
+            
             if (String.Equals(ActionName, currentAction as string, StringComparison.OrdinalIgnoreCase)
                 && String.Equals(ControllerName, currentController as string, StringComparison.OrdinalIgnoreCase))
             {
-                output.Attributes.SetAttribute("class", "active item blue");
+              output.Attributes.SetAttribute("class", "active");
             }
 
         }
